@@ -429,7 +429,8 @@ public func det(_ x: Matrix<Float>) -> Float? {
         if p != i + 1 {
             det = -det * decomposed[i, i]
         } else {
-            det = det * decomposed[i, i]
+            let detNew =  det * decomposed[i, i]
+            det = detNew
         }
     }
     return det
@@ -457,7 +458,8 @@ public func det(_ x: Matrix<Double>) -> Double? {
         if p != i + 1 {
             det = -det * decomposed[i, i]
         } else {
-            det = det * decomposed[i, i]
+            let detNew =  det * decomposed[i, i]
+            det = detNew
         }
     }
     return det
